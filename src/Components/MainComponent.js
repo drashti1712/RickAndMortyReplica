@@ -1,7 +1,7 @@
 import React from 'react'
-import TitleComponent from './TitleComponent'
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../Theme';
+import TitleComponent from './TitleComponent'; 
+import theme from '../Themes/Theme';
 
 export default function MainComponent() {
     return (

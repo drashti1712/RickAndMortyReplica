@@ -1,33 +1,32 @@
 import React from 'react'
-import Box from '@material-ui/core/Box'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles';
-import Image from '../images/background.png'
+import {Grid, Typography, makeStyles} from "@material-ui/core";
+import Image from '../Shared/images/background2.png'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
     BoxStyle: {
         backgroundImage: `url(${Image})`,
         backgroundRepeat:"no-repeat",
-        backgroundSize:"cover",
+        backgroundSize:"auto 100%",
+        backgroundPosition:"center",
         width:"100%",
-        height: "350px",
-    },
-    TitleStyle:{
-        position:"relative",
-        top:"130px"
+        height:"350px",
+        [theme.breakpoints.between('sm','md')]:{
+            height:'500px',
+        },
     }
-  });
+  }));
 
 const TitleComponent = () => {
     const classes = useStyles();
     return (
         <div>
-            <Box className={classes.BoxStyle}>
-            {/* <h1 className={classes.TitleStyle}>The Rick and Morty Show</h1>     */}
-            <Typography className={classes.TitleStyle} variant="h1" align="center" display="block">
-                The Rick and Morty Show
-            </Typography>
-            </Box>
+            <Grid container direction="row" justify="center" alignItems='center' wrap='wrap' className={classes.BoxStyle}>
+                <Grid item>
+                    <Typography variant="h1" align='center'>
+                        The Rick and Morty Show
+                    </Typography>   
+                </Grid>
+            </Grid>
         </div>
     )
 }
