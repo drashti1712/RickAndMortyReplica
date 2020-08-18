@@ -11,11 +11,17 @@ const theme = createMuiTheme({
       main: green[500],
     },
   },
-  typography:{
-      h1:{
-          fontFamily:"Alfa Slab One"
-      }
-  }
 });
+
+theme.typography.h1 = {
+  fontFamily:"Alfa Slab One",
+  fontSize: '1.5rem',
+  '@media (min-width:600px)': {
+    fontSize: '2.5rem',
+  },
+  [theme.breakpoints.up('md')]: {
+    fontSize: '4.5rem',
+  },
+};
 
 export default theme;

@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid, Typography, makeStyles} from "@material-ui/core";
-import Image from '../Shared/images/background2.png'
+import Image from '../Shared/images/background.png'
 
 const useStyles = makeStyles((theme)=>({
     BoxStyle: {
