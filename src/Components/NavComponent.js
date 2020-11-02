@@ -109,7 +109,7 @@ export default function ButtonAppBar() {
           <img src={logo} alt="logo" className={classes.logo} />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-              <ul className={classes.options} unlisted>
+              <ul className={classes.options}>
                 <li><a className={classes.link} href="#">Docs</a></li>
                 <li><a className={`${classes.link} ${classes.padding}`}href="#">About</a></li>
                 <li>
