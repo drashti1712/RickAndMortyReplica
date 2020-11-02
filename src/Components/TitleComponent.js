@@ -9,10 +9,17 @@ const useStyles = makeStyles((theme)=>({
         backgroundSize:"auto 100%",
         backgroundPosition:"center",
         width:"100%",
-        height:"350px",
-        [theme.breakpoints.between('sm','md')]:{
-            height:'500px',
-        },
+        height:"240px",
+        // [theme.breakpoints.between('sm','md')]:{
+        //     height:'300px',
+        // },
+    },
+    h1class: {
+        margin:"0px",
+        color:"rgb(32,35,41)",
+        border:"medium none",
+        fontWeight:'900',
+        zIndex:"1",
     }
   }));
 
@@ -22,7 +29,7 @@ const TitleComponent = () => {
         <div>
             <Grid container direction="row" justify="center" alignItems='center' wrap='wrap' className={classes.BoxStyle}>
                 <Grid item>
-                    <Typography variant="h1" align='center'>
+                    <Typography variant="h1" align='center'className={classes.h1class}>
                         The Rick and Morty Show
                     </Typography>   
                 </Grid>

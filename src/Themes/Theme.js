@@ -14,13 +14,21 @@ const theme = createMuiTheme({
 });
 
 theme.typography.h1 = {
-  fontFamily:"Alfa Slab One",
-  fontSize: '1.5rem',
-  '@media (min-width:600px)': {
-    fontSize: '2.5rem',
+  fontFamily: "-apple-system,'BlinkMacSystemFont','Segoe UI','Segoe UI Emoji','Segoe UI Symbol'",
+  // textRendering: 'optimizeLegibility',
+  lineHeight:'1.1',
+
+  '@media (max-width:600px)': {
+    fontSize:'2.5rem',
+  },
+  [theme.breakpoints.up('sm')]: {
+    fontSize:'3rem',
   },
   [theme.breakpoints.up('md')]: {
-    fontSize: '4.5rem',
+    fontSize:'3.5rem',
+  },
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '5.625rem',
   },
 };
 
