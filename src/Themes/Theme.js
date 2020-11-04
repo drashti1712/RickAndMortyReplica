@@ -1,6 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 // import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+// import white from '@material-ui/core/colors/white';
 
 const theme = createMuiTheme({
   palette: {
@@ -8,14 +8,13 @@ const theme = createMuiTheme({
       main: "#f5f5f5",
     },
     secondary: {
-      main: green[500],
+      main: '#ffffff',
     },
   },
 });
 
 theme.typography.h1 = {
   fontFamily: "-apple-system,'BlinkMacSystemFont','Segoe UI','Segoe UI Emoji','Segoe UI Symbol'",
-  // textRendering: 'optimizeLegibility',
   lineHeight:'1.1',
 
   '@media (max-width:600px)': {
@@ -30,6 +29,12 @@ theme.typography.h1 = {
   [theme.breakpoints.up('lg')]: {
     fontSize: '5.625rem',
   },
+};
+
+theme.typography.h4 = {
+  marginLeft:'3.5rem',
+  fontFamily:'Dosis',
+  fontSize:'2rem'
 };
 
 export default theme;
