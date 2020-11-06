@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-import {IconButton, Button, AppBar, Toolbar, MenuItem, Menu, Typography, makeStyles} from '@material-ui/core';
+import {Avatar, IconButton, Button, AppBar, Toolbar, MenuItem, Menu, Typography, makeStyles} from '@material-ui/core';
 // import MoreIcon from '@material-ui/icons/MoreVert';
 import MenuIcon from '@material-ui/icons/Menu';
 import logo from "../Shared/images/logo.png";
@@ -106,15 +106,15 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appbar}>
         <Toolbar>
-          <img src={logo} alt="logo" className={classes.logo} />
+          <a href="#"><Avatar alt="logo" src={logo} className={classes.logo} /></a>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
               <ul className={classes.options}>
-                <li><a className={classes.link} href="#">Docs</a></li>
-                <li><a className={`${classes.link} ${classes.padding}`}href="#">About</a></li>
+                <li><a className={classes.link} href="#">Characters</a></li>
+                <li><a className={`${classes.link} ${classes.padding}`}href="#">Episodes</a></li>
                 <li>
                    <Button size='small' variant="outlined">
-                     <a className={classes.link} href="#">HELP US</a>
+                     <a className={classes.link} href="#">ABOUT</a>
                    </Button>
                 </li>
               </ul>  

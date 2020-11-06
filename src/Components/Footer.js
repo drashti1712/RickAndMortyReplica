@@ -12,25 +12,36 @@ const useStyles = makeStyles((theme)=>({
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        flexFlow:'column nowrap',
-        position:'relative',
+        flexFlow:'column',
+        position:'absolute',
         padding: '4.5rem 0px',
     },
     options:{
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        listStylePosition:'outside',
+        listStylePosition:'inside',
         listStyleImage:'none',
-        listStyleType:'none',
+        listStyleType:'none'
       },
     list:{
         padding:'10px',
         color: 'rgb(158, 158, 158)',
         fontWeight:'bold',
         fontSize:'14px',
-        wordWrap:'break-word',
         textDecoration:'none',
+        [theme.breakpoints.down(470)]:{
+            fontSize:'12px',
+            padding:'5px',
+        },
+        [theme.breakpoints.down(370)]:{
+            fontSize:'10px',
+            padding:'5px',
+        },
+        [theme.breakpoints.down(270)]:{
+            fontSize:'8px',
+            padding:'5px',
+        },
     },
     break:{
         height:'50px'
@@ -50,26 +61,26 @@ const Footer = () =>{
     
     return(
         <footer className={classes.root}>
-            <ul className={classes.options}>
-                <li><a href="#" className={classes.list}>CHARACTERS: 671</a></li>
-                <li><a href="#" className={classes.list}>LOCATIONS: 108</a></li>
-                <li><a href="#" className={classes.list}>EPISODES: 41</a></li>
-            </ul>
-            <span>
+            <div className={classes.options}>
+                <a href="#" className={classes.list}>CHARACTERS: 671</a>
+                <a href="#" className={classes.list}>LOCATIONS: 108</a>
+                <a href="#" className={classes.list}>EPISODES: 41 </a>
+            </div>
+            <div>
                 <a href="#" className={classes.list}>SERVER STATUS</a>
                 <i style={IconStyle} className="fa fa-circle fa-sm"></i>
-            </span>
+            </div>
             <div className={classes.break}>
 
             </div>
-            <ul  style={{marginLeft:'-35px'}} className={classes.options}>
-                <li><a href="#" className={classes.list}><i className="fa fa-github fa-2x"></i></a></li>
-                <li><a href="#" className={classes.list}><i className="fa fa-twitter fa-2x"></i></a></li>
-                <li><a href="#" className={classes.list}><i className="fa fa-home fa-2x"></i></a></li>
-            </ul>
-            <span className={classes.list}>
-                App created by Drashti Modasara
-            </span>
+            <div className={classes.options}>
+                <a href="#" className={classes.list}><i className="fa fa-github fa-2x"></i></a>
+                <a href="#" className={classes.list}><i className="fa fa-twitter fa-2x"></i></a>
+                <a href="#" className={classes.list}><i className="fa fa-home fa-2x"></i></a>
+            </div>
+            <div className={classes.list}>
+                Created by- Drashti Modasara
+            </div>
         </footer>
     );
 }
